@@ -1,0 +1,28 @@
+{
+  "name": "valorstats",
+  "version": "0.0.0",
+  "description": "Valorstats- an in-depth Valorant stats tracker",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build windows/desktop/desktop.html --public-url ./ --experimental-scope-hoisting",
+    "watch": "parcel watch windows/desktop/desktop.html",
+    "start": "parcel serve windows/desktop/desktop.html",
+    "clean": "rm -v dist/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmills20/Valorstats.git"
+  },
+  "author": "Braxton Mills",
+  "license": "CC BY-NC-SA",
+  "bugs": {
+    "url": "https://github.com/bmills20/Valorstats/issues"
+  },
+  "homepage": "https://github.com/bmills20/Valorstats/#readme",
+  "dependencies": {
+    "chart.js": "git+https://github.com/chartjs/Chart.js.git",
+    "gulp": "^4.0.2",
+    "nodejs": "0.0.0",
+    "parcel": "^1.12.4"
+  }
+}

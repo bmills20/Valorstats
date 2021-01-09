@@ -4,17 +4,34 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode=development",
-    "dev": "webpack --watch --mode=development"
+    "build": "parcel build windows/desktop/desktop.html --public-url ./ --experimental-scope-hoisting",
+    "watch": "parcel watch windows/desktop/desktop.html",
+    "start": "parcel serve windows/desktop/desktop.html",
+    "clean": "rm -v dist/*"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmills20/Valorstats.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bmills20/Valorstats/issues"
+  },
+  "homepage": "https://github.com/bmills20/Valorstats/#readme",
   "keywords": [],
-  "author": "",
+  "author": "Braxton Mills",
   "license": "ISC",
   "devDependencies": {
     "html-webpack-plugin": "^3.2.0",
+    "parcel": "^1.12.4",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.5",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.3.0",
+    "chart.js": "^2.9.3",
+    "jquery": "^3.5.1",
+    "react": "^16.13.1"
   }
 }
