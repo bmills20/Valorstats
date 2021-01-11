@@ -81,6 +81,16 @@ function monthChart() {
     
 }
 
+function addData(chart, idx) {
+    chart.data.labels.push(
+        "9/24", "9/25", "9/26", "9/27", "9/28", "9/29", "9/30", "10/1", "10/2"
+    );
+    chart.data.datasets[idx].data.push(
+        12, 19, 3, 5, 2, 3, 15, 12, 15, 13, 15, 12, 13, 11, 12, 19, 3
+    );
+    chart.update();
+}
+
 /*--Make sure jQuery is loaded before referencing with $ by delaying display until document is ready
 Must be at bottom to allow functions to be loaded first */
 $(document).ready(function () {
@@ -182,12 +192,30 @@ $(document).ready(function () {
     
     //autofocus first button
     $('#buttonautofocus').addClass('focus');
-    //keep focus when clicked elsewhere
+
+    //create variable for last focused button so current graphs aren't recreated
+    var lastFocus;
+
+    //keep focus when clicked elsewhere and apply proper focus when clicked
     $('button').click(function () {
 
         $('button').removeClass('focus');
         $(this).addClass('focus');
     });
     
+    $('#buttonautofocus').click(function () {
+        console.log($(this).attr('id'),lastFocus);
+        if($(this).attr('id') != lastFocus) {
+            console.log($(this), lastFocus);
+            weekChart();
+        }
+        lastFocus = $(this).attr('id');
+    });
+    $('#monthshot').click(function () {
+        if($(this).attr('id') != lastFocus) {
+            addData(chart3,0);
+        }
+        lastFocus = $(this).attr('id');
+    });
 
 });

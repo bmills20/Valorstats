@@ -4,7 +4,7 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../../node_modules/chart.js/dist/Chart.bundle.js"></script>
-    <script src="desktop.js"></script>
+    <script src="~/desktop.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="../../css/desktop.css">
@@ -14,47 +14,6 @@
 
 <body>
     <div class="container">
-        <div class="window-container">
-            <header class="window-header">
-                <div class="logo-container">
-                    <div class="app-logo">
-                        <svg class="app-logo-icon">
-                            <use href="#app-icon"></use>
-                        </svg>
-                        <span class="app-name">Valorstats</span>
-                    </div>
-                </div>
-                <div class="actions-container">
-                    <button class="go-back-window window-button-style">
-                        <svg class="window-controls-icon">
-                            <use href="#window-back"></use>
-                        </svg>
-                    </button>
-                    <button class="home-window window-button-style">
-                        <svg class="window-controls-icon">
-                            <use href="#window-home"></use>
-                        </svg>
-                    </button>
-                    <button class="settings-window window-button-style">
-                        <svg class="window-controls-icon">
-                            <use href="#window-settings"></use>
-                        </svg>
-                    </button>
-                    <button class="minimize-window window-button-style">
-                        <svg class="window-controls-icon">
-                            <use href="#window-minimize"></use>
-                        </svg>
-                    </button>
-                    <button class="close-window window-button-style">
-                        <svg class="window-controls-icon">
-                            <use href="#window-close"></use>
-                        </svg>
-                    </button>
-                </div>
-            </header>
-            <main></main>
-            <footer></footer>
-        </div>
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 
             <symbol id="app-icon" viewBox="0 0 24 24">
@@ -106,17 +65,17 @@
 
     </div>
     <div class="content">
+        <div class="chart2">
+            <h2>Shot %</h2>
+            <canvas id="myChart3"></canvas>
+            <div class="btnalign"><button id="buttonautofocus" type="button">1w</button><button id="monthshot">1m</button><button id="3monthshot">3m</button><button id="allshot">All </button></div>
+
+        </div>
         <div class="chart">
             <h2>Games Played</h2>
             <canvas id="myChart"></canvas>
         </div>
-        <div class="chart2">
-            <h2>Shot %</h2>
-            <canvas id="myChart3"></canvas>
-            <script>console.log(weekChart())</script>
-            <div class="btnalign"><button id="buttonautofocus" type="button" onclick="weekChart()">1w</button><button id="monthshot" onclick="monthChart()">1m</button><button id="3monthshot">3m</button><button id="allshot">All </button></div>
 
-        </div>
 
     </div>
 

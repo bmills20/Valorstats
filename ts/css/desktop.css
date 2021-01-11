@@ -119,18 +119,17 @@ button.lastGamebtn
 .content .radar
 {
 	background-color: rgba(41, 44, 52, 1.0);
-	border-radius: 15px;
+	border-radius: .25rem;
 	display: inline-block;
 	height: 550px;
-	margin: 30px;
-	margin-bottom: 130px;
-	margin-left: 9px;
-	margin-top: -4px;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 10px;
 	padding: 30px;
 	padding-top: 10px;
 	position: relative;
 	text-align: left;
-	width: 565px;
+	width: 41%;
 }
 .content .radar #radardiv
 {
@@ -147,7 +146,7 @@ button.lastGamebtn
 }
 .content .radar .first > th
 {
-	font-size: 15px;
+	font-size: 30px;
 	padding-bottom: 10px;
 }
 th.details
@@ -169,13 +168,12 @@ img.gunwhite
 .content .lastgame
 {
 	background-color: rgba(41, 44, 52, 1.0);
-	border-radius: 15px;
+	border-radius: .25rem;
 	display: inline-block;
-	float: left;
 	height: 550px;
-	margin: 30px;
-	margin-right: 20px;
-	margin-top: 0px;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 10px;
 	padding: 30px;
 	padding-top: 10px;
 	position: relative;
@@ -199,18 +197,17 @@ tr:nth-child(even).spaceAbove
 .content .news
 {
 	background-color: rgba(41, 44, 52, 1.0);
-	border-radius: 15px;
+	border-radius: .25rem;
 	display: inline-block;
 	height: 550px;
-	margin: 30px;
-	margin-bottom: 130px;
-	margin-left: 20px;
-	margin-top: -4px;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 10px;
 	padding: 30px;
 	padding-top: 10px;
 	position: relative;
 	text-align: left;
-	width: 140px;
+	width: 23%;
 }
 .content .news .first > th
 {
@@ -384,7 +381,7 @@ div.content
 }
 div.background
 {
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(15, 25, 35, 0.73)),
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(6, 2, 2, 0.73)),
  url('../img/Wallpapers/Omen/omenreddit.png');
 	background-size: cover;
 	/*filter: blur(4px);*/
@@ -494,7 +491,7 @@ hr
 	display: inline-block;
 	vertical-align: middle;
 }
-div.row.firstRow
+div.row
 {
     
     margin: 1.65em;
@@ -508,7 +505,11 @@ h1.sectionHeader
 }
 div.card
 {
-    margin-top: 65px; 
+    margin-top: 10px; 
+}
+.shadow-xl
+{
+	box-shadow: 0 0 3rem rgba(0,0,0,.575)!important;
 }
 .window-button-style
 {
@@ -527,6 +528,10 @@ div.card
 	transition: fill 150ms ease;
 	user-select: none;
 	width: 30px;
+}
+path.victory 
+{
+	fill: green;
 }
 @media screen and (max-width: 700px)
 {
