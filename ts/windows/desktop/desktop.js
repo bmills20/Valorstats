@@ -36,6 +36,10 @@ function weekChart() {
                         reverse: false
                     }
                             }]
+            },
+            animation: {
+                duration: 5000,
+                
             }
         }
     };
@@ -74,6 +78,10 @@ function monthChart() {
                         reverse: false
                     }
                             }]
+            },
+            animation: {
+                duration: 5000,
+                
             }
         }
     };
@@ -86,7 +94,7 @@ function addData(chart, idx) {
         "9/24", "9/25", "9/26", "9/27", "9/28", "9/29", "9/30", "10/1", "10/2"
     );
     chart.data.datasets[idx].data.push(
-        12, 19, 3, 5, 2, 3, 15, 12, 15, 13, 15, 12, 13, 11, 12, 19, 3
+        12, 19, 3, 5, 2, 3, 15, 12, 15
     );
     chart.update();
 }
@@ -156,6 +164,10 @@ $(document).ready(function () {
                         ]
         },
         options: {
+            animation: {
+                    duration: 5000
+                
+            },
             scales: {
                 yAxes: [{
                     ticks: {
@@ -163,6 +175,7 @@ $(document).ready(function () {
                     }
                             }]
             }
+            
         }
     };
 
